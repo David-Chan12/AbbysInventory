@@ -1,0 +1,102 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #eef2f7;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 300px;
+    background-color: #d95f8b;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.menu-item.selected {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Sección de Costeo */
+.costs-section {
+    margin-top: 20px;
+}
+
+.costs-section h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.costs-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.costs-table th, .costs-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.costs-table th {
+    background-color: #d95f8b;
+    color: #fff;
+}
+
+.costs-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

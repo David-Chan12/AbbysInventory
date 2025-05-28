@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2f7; /* Fondo claro */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido */
+}
+
+.menu-container {
+    width: 100%; /* Usa el ancho completo de la pantalla */
+    height: 100%; /* Usa la altura completa de la pantalla */
+    padding: 20px;
+    box-sizing: border-box; /* Asegúrate de incluir el relleno en el tamaño */
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.menu-header {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #d95f8b; /* Fondo para resaltar el encabezado */
+    color: #fff; /* Texto blanco */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cursor-icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu-header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.user-email {
+    font-size: 14px;
+    margin: 5px 0 0 10px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4a90e2; /* Azul oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #357ab8; /* Azul más oscuro al pasar el mouse */
+}
+
+.logout {
+    background-color: #e53e3e; /* Rojo para el botón de cerrar sesión */
+}
+
+.logout:hover {
+    background-color: #c53030; /* Rojo más oscuro al pasar el mouse */
+}
