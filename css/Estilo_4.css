@@ -1,0 +1,81 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #eef2f7;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 100%; /* Usa toda la anchura */
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 300px; /* Ancho fijo para la barra lateral */
+    background-color: #d95f8b;
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    text-decoration: underline; /* Resalta el elemento al pasar el mouse */
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.help-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-item {
+    background-color: #d95f8b; /* Rosado para las opciones */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.option-item:hover {
+    background-color: #c94b74; /* Rosado más oscuro al pasar el mouse */
+}

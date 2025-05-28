@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.panel-background {
+  background: url('../css/empleado.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease forwards;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  color: #e06666;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #663C33;
+  font-size: 14px;
+}
+
+.page-title {
+  text-align: center;
+  color: #663C33;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.section-title {
+  color: #a87165;
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 2px solid #f0e6e3;
+  padding-bottom: 10px;
+}
+
+.report-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el selector de empleados */
+.employee-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  background: #fff9f7;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.employee-selector label {
+  color: #a87165;
+  font-weight: 500;
+  min-width: 150px;
+}
+
+.form-select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #d9c7c2;
+  background: white;
+  color: #663C33;
+  flex-grow: 1;
+  max-width: 300px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.form-select:focus {
+  outline: 2px solid #a87165;
+}
+
+.add-btn {
+  background: #a87165;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.add-btn:hover {
+  background: #ba8478;
+}
+
+/* Estilos para la tabla editable */
+.editable-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff9f7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.editable-table th, 
+.editable-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0e6e3;
+}
+
+.editable-table th {
+  background-color: #a87165;
+  color: white;
+  font-weight: 500;
+}
+
+.editable-table tr:hover {
+  background-color: #fff0eb;
+}
+
+.editable-table td[contenteditable="true"] {
+  background: white;
+  border: 1px solid #f0e6e3;
+  border-radius: 4px;
+  padding: 10px;
+  min-width: 150px;
+  transition: all 0.2s ease;
+}
+
+.editable-table td[contenteditable="true"]:focus {
+  outline: 2px solid #a87165;
+  background: #fff9f7;
+  box-shadow: 0 0 0 2px rgba(168, 113, 101, 0.2);
+}
+
+.category-select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d9c7c2;
+  background: white;
+  color: #663C33;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.category-select:focus {
+  outline: 2px solid #a87165;
+}
+
+.date-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d9c7c2;
+  color: #663C33;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.date-input:focus {
+  outline: 2px solid #a87165;
+}
+
+/* Estilos para botones de acción */
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  margin: 0 3px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  color: #4CAF50;
+}
+
+.save-btn:hover {
+  background: rgba(76, 175, 80, 0.1);
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  color: #e06666;
+}
+
+.delete-btn:hover {
+  background: rgba(224, 102, 102, 0.1);
+  transform: scale(1.1);
+}
+
+/* Estilos para los botones de acciones de tabla */
+.table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.save-all-btn, 
+.export-btn {
+  background: #a87165;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.save-all-btn:hover, 
+.export-btn:hover {
+  background: #ba8478;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.save-all-btn:active, 
+.export-btn:active {
+  transform: translateY(0);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+  .panel-background {
+    padding: 20px;
+    align-items: flex-start;
+  }
+  
+  .main-panel {
+    padding: 20px;
+  }
+  
+  .employee-selector {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .form-select {
+    max-width: 100%;
+  }
+  
+  .editable-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .save-all-btn, 
+  .export-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .editable-table th, 
+  .editable-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  
+  .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+/* Estilos para formularios */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #663C33;
+  font-weight: 500;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d9c7c2;
+  min-height: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #d9c7c2;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Mensajes de éxito/error */
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+}

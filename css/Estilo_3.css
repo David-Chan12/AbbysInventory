@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh; /* Usa toda la altura de la pantalla */
+    background-color: #eef2f7; /* Fondo claro */
+}
+
+.sidebar {
+    width: 300px; /* Anchura de la barra lateral */
+    background-color: #d95f8b; /* Color rosado */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: #fff; /* Texto blanco */
+}
+
+.back-button {
+    background-color: #e53e3e; /* Rojo para el botón de regreso */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-button {
+    background-color: #ffffff; /* Botones blancos */
+    color: #d95f8b; /* Texto rosado */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #f4c6da; /* Rosado claro al pasar el mouse */
+}
+
+.topbar {
+    padding: 10px;
+    background-color: #fff; /* Barra superior blanca */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: right;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #555;
+}
